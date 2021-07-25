@@ -4,16 +4,17 @@ using System.Text;
 
 namespace ZOO
 {
-    class GroundAnimal:Animal
+    class GroundAnimal : Animal
     {
+
         public override void Move()
         {
-            base.Move();
+
             Console.WriteLine("Я хожу по земле..");
         }
         public override void Voice()
         {
-            Console.WriteLine("Издаю такие звуки: ...");
+            Console.WriteLine($"Издаю такие звуки: ...{Sound}");
         }
     }
 }

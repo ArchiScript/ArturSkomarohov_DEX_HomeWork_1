@@ -9,13 +9,13 @@ namespace ZOO
         
         public override void Move()
         {
-            base.Move();
+            
             Console.WriteLine("плаваю в водичке...");
         }
-        public override void Eat()
+        public override void Eat(dynamic Feeding)
         {
-            base.Eat();
-            Console.WriteLine("Кушаю водоросли...");
+            
+            Console.WriteLine("Кушаю " + Feeding + "...");
         }
     }
 }

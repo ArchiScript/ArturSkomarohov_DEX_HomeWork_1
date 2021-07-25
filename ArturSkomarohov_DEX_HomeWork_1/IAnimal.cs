@@ -7,7 +7,7 @@ namespace ZOO
     interface IAnimal
     {
 
-        void Eat();
+        void Eat(dynamic food);
         void Move();
         void Voice();
         void Show();
