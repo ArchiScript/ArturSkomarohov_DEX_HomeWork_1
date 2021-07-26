@@ -6,17 +6,21 @@ namespace ZOO
 {
     public class Animal : IAnimal
     {
-               
+
         public string Name { get; set; }
         public string Size { get; set; }
-        public dynamic Feeding { get; set; }
+        public string Feeding { get; set; }
+        public object ObFeeding { get; set; }
         public string Sound { get; set; }
 
-        public virtual void Eat(dynamic Feeding)
+        public virtual void Eat()
         {
             Console.WriteLine($"Ням ням ням... кушаю {Feeding}");
         }
-
+        public virtual void Eat(Animal animal)
+        {
+            Console.WriteLine($"Ням ням ням... кушаю" + ObFeeding);
+        }
         public virtual void Move()
         {
             Console.WriteLine("Передвигаюсь...");
@@ -32,7 +36,7 @@ namespace ZOO
             this.Voice();
             this.Move();
         }
-        
+
 
 
     }

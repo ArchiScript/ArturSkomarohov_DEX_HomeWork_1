@@ -12,10 +12,10 @@ namespace ZOO
             
             Console.WriteLine("плаваю в водичке...");
         }
-        public override void Eat(dynamic Feeding)
+        public override void Eat(Animal animal)
         {
             
-            Console.WriteLine("Кушаю " + Feeding + "...");
+            Console.WriteLine("Кушаю " + animal.Name + "...");
         }
     }
 }

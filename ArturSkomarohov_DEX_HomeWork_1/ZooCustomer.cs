@@ -8,7 +8,7 @@ namespace ZOO
     {
         public virtual void Feed(Animal animal)
         {
-            animal.Eat(animal.Feeding);
+            animal.Eat(animal.ObFeeding);
         }
         public virtual void Watch(Animal animal)
         {
@@ -25,7 +25,7 @@ namespace ZOO
         {
             foreach (var item in animals)
             {
-                item.Eat(item.Feeding);
+                item.Eat();
             }
         }
     }

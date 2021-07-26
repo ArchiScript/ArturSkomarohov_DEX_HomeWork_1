@@ -7,16 +7,16 @@ namespace ZOO
     {
         static void Main()
         {
-
+            
             GroundAnimal elephant = new GroundAnimal() { Name = "Слон", Size = "Гигантский", Feeding = "растительность", Sound = "У-в-в-вф!" };
             Birds bird = new Birds() { Name = "Воробей", Size = "маленький", Feeding = "червячки", Sound = "Чик чирик!" };
             WaterAnimal fish = new WaterAnimal() { Name = "Карась", Feeding = "водоросли", Size = "маленький", Sound = "Буль буль" };
-            Predator lion = new Predator() { Name = "Лев", Feeding = fish.Name, Size = "большой", Sound = "Р-р-р-р-р" };
+            Animal lion = new Predator() { Name = "Лев", ObFeeding = bird, Size = "большой", Sound = "Р-р-р-р-р" };
 
             GroundAnimal kenguru = new GroundAnimal() { Name = "Кенгуру", Size = "Средний", Feeding = "Австралийская растительность", Sound = "Прыг прыг" };
             Animal[] animalСommunity = new Animal[] { fish, bird, lion, elephant, kenguru };
             ZooCustomer Person = new ZooCustomer();
-
+            lion.Eat(kenguru);
             Console.WriteLine("Добро пожаловать в Виртуальный Зоопарк Приднестровья!");
             Console.WriteLine("Как Вас зовут?");
 

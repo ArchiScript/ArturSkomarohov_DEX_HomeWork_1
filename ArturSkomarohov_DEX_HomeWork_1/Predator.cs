@@ -10,10 +10,10 @@ namespace ZOO
         {
             Console.WriteLine("Ааа--м .. поймал");
         }
-        public override void Eat(dynamic animal)
+        public override void Eat(Animal animal)
         {
             CatchAnimal(new Animal());
-            Console.WriteLine("Кушаю других животных, вот сегодня" + animal);
+            Console.WriteLine("Кушаю других животных, вот сегодня " + animal.Name);
         }
 
     }
