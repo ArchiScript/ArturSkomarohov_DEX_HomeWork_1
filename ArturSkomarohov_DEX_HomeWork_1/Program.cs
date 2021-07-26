@@ -14,7 +14,7 @@ namespace ZOO
             Predator lion = new Predator() { Name = "Лев", Feeding = fish.Name, Size = "большой", Sound = "Р-р-р-р-р" };
 
             GroundAnimal kenguru = new GroundAnimal() { Name = "Кенгуру", Size = "Средний", Feeding = "Австралийская растительность", Sound = "Прыг прыг" };
-            Animal[] animal_community = new Animal[] { fish, bird, lion, elephant, kenguru };
+            Animal[] animalСommunity = new Animal[] { fish, bird, lion, elephant, kenguru };
             ZooCustomer Person = new ZooCustomer();
 
             Console.WriteLine("Добро пожаловать в Виртуальный Зоопарк Приднестровья!");
@@ -27,7 +27,7 @@ namespace ZOO
             while (Console.ReadLine() != "x")
             {
                 Console.WriteLine("Введите пожалуйста животное из списка..");
-                foreach (var item in animal_community)
+                foreach (var item in animalСommunity)
                 {
                     Console.WriteLine(Convert.ToString($" {item.Name}"));
 
@@ -35,7 +35,7 @@ namespace ZOO
                 Console.WriteLine(" Всех");
                 string inputAnimal = Console.ReadLine();
 
-                foreach (var strAnimal in animal_community)
+                foreach (var strAnimal in animalСommunity)
                 {
 
                     if (inputAnimal != "" && inputAnimal == strAnimal.Name)
@@ -60,12 +60,12 @@ namespace ZOO
                         string action = Console.ReadLine();
                         if (action != "" && action == "Кормить" || action == "кормить")
                         {
-                            Person.FeedAll(animal_community);
+                            Person.FeedAll(animalСommunity);
                             break;
                         }
                         else if (action != "" && action == "Смотреть" || action == "смотреть")
                         {
-                            Person.WatchAll(animal_community);
+                            Person.WatchAll(animalСommunity);
                             break;
                         }
                     }
